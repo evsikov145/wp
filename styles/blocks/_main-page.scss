@@ -2,7 +2,7 @@
     width: 100%;
     height: 100vh;
     position: relative;
-    background: url("../../static/images/main/main-bg.png") center no-repeat;
+    background: url("../../public/static/images/main/main-bg.png") center no-repeat;
     background-size: cover;
     overflow: hidden;
 }
@@ -36,7 +36,7 @@
 
 .main__line {
     font-size: 0;
-    background: url("../../static/images/svg/line.svg") center no-repeat;
+    background: url("../../public/static/images/svg/line.svg") center no-repeat;
     background-size: 756px 2px;
     width: 756px;
     height: 1px;
@@ -62,7 +62,7 @@
     right: 0;
     width: 1545px;
     height: 359px;
-    background: url("../../static/images/main/text.png") center no-repeat;
+    background: url("../../public/static/images/main/text.png") center no-repeat;
     background-size: 1545px 359px;
     animation: move-photo 2s ease-in 0s 1 normal;
 }
@@ -83,7 +83,7 @@
     right: -11px;
     width: 1000px;
     height: 1000px;
-    background: url("../../static/images/svg/circle.svg") center no-repeat;
+    background: url("../../public/static/images/svg/circle.svg") center no-repeat;
     background-size: 1000px 1000px;
     animation: move-circle 2s ease-in 0s 1 normal;
 }

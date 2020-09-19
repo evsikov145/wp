@@ -1,43 +1,35 @@
-const mysql = require("mysql2");
-
-/*-------- DATABASES ---------*/
-
-const connection = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    database: "wp",
-    password: "admin"
-});
-connection.connect(function(err){
-    if (err) {
-        return console.error("Ошибка: " + err.message);
-    }
-    else{
-        console.log("Подключение к серверу MySQL успешно установлено");
-    }
-});
-
-/*-------- ЗАПРОСЫ ---------*/
+import Pages from '../../config/models/Pages'
+import sequelize from "../../config/db";
 
 export default (req, res) => {
-    let data;
-    connection.query("SELECT * FROM mainpage",(err, results) => {
-        if(err){
-            console.log(err);
-        }else {
-            data = results;
-        }
-    });
-
-    console.log(data)
-
-    const users = [{ id: 1 }, { id: 2 }, { id: 3 }]
-
-    res.status(200).json(users)
-    res.setHeader('Content-Type', 'application/json')
-    return res.json(users)
-
+    Pages.findByPk('main')
+        .then(page => {
+            if(!page){
+                res.status(500)
+                res.end()
+            }else {
+                res.setHeader('Content-Type', 'application/json')
+                res.status(200).json(page)
+            }
+        }).catch(err=>console.log(err));
 }
 
 
-/*-----------------*/
+/*import connection from '../../config/db';
+
+export default (req, res) => {
+
+    if(req.method === "GET"){
+        connection.query("SELECT * FROM pages", (err, results) => {
+            if(err){
+                console.log(err);
+                res.status(500)
+                res.end()
+            }else {
+                res.setHeader('Content-Type', 'application/json')
+                res.status(200).json(results)
+            }
+        });
+    }
+}*/
+
