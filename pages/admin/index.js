@@ -1,9 +1,3 @@
-import Login from "../../components/admin/Login";
+export default function Admin(){
 
-export default function Index() {
-    return (
-        <>
-            <Login/>
-        </>
-    )
 }
