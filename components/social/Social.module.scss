@@ -1,0 +1,29 @@
+.social {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  left: 75px;
+  bottom: 110px;
+  max-width: 178px;
+  width: 100%;
+  z-index: 10;
+  animation: move-social 2s ease-in 0s 1 normal;
+}
+
+.social__link {
+  font-size: 31px;
+  font-weight: 300;
+  color: #ffffff;
+}
+
+@keyframes move-social {
+  from {
+    left: 0;
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    left: 75px;
+  }
+}

@@ -1,65 +1,49 @@
+import {useState} from 'react'
 import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Nav from "../components/nav/Nav";
+import Social from "../components/social/Social";
+import PaginationPage from "../components/pagination/PaginationPage";
 
-export default function Home() {
-  return (
-    <div className={styles.container}>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+export default function Index({data}) {
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+    const [mainText] = useState({
+        h3: 'Свадебный фотограф',
+        h2 : 'Елена',
+        h1 : 'Рубцова',
+        desc: 'Фотографии сделанные с душой'
+    })
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
+    return (
+        <>
+            <Head>
+                <title> Главная | Wedding Photo</title>
+                <meta name="description" content="Свадебный фотограф"/>
+                <meta name="robots" content="index,follow" />
+                <meta name="keywords" content="Свадьба, Свадебный, фотограф, свадебный фотограф, тула" />
+                <meta name="viewport" content="width=device-width, initial-scale=1"/>
+            </Head>
+            <section className="main">
+                <Nav/>
+               <Social/>
+                <PaginationPage/>
+                <div className="main-title">
+                    <h3>{mainText.h3}</h3>
+                    <h2>{mainText.h2}</h2>
+                    <h1>{mainText.h1}</h1>
+                    <p className="main-title__desc">{mainText.desc}</p>
+                </div>
+                <div className="main__line">line</div>
+                <div className="main__photo">photo</div>
+                <div className="main__circle">circle</div>
+            </section>
+        </>
+    )
+}
 
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
-      </main>
-
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
-  )
+export async function getServerSideProps() {
+    // Fetch data from external API
+    const res = await fetch(`http://localhost:3000/api/main`)
+    const data = await res.json()
+    // Pass data to the page via props
+    return { props: { data } }
 }
