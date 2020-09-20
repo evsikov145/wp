@@ -1,0 +1,27 @@
+.adminHome {
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #f6f7fb;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.adminTitle1 {
+  color: #0e1935;
+  font-size: 50px;
+  margin-bottom: 40px;
+}
+
+.adminTitle2 {
+  color: #0e1935;
+  font-size: 30px;
+  margin-bottom: 40px;
+  line-height: 1.5;
+}
+
+.adminTitle3 {
+  color: #0e1935;
+}

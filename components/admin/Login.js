@@ -6,11 +6,13 @@ export default function Login(){
 
     const [login, setLogin] = useState('');
     const [password, setPassword] = useState('')
+    const [title, setTitle] = useState('Для доступа введите логин и пароль')
 
     const submitData = () => {
         if(login !== "admin" || password !== "admin"){
             setLogin('');
             setPassword('');
+            setTitle('Введите корректный логин и пароль!')
             return false;
         }
         Router.push('/admin');
@@ -19,7 +21,7 @@ export default function Login(){
     return (
         <section className={classes.login}>
             <div className={classes.loginBody}>
-                <h1 className={classes.loginTitle}>Для доступа введите логин и пароль</h1>
+                <h1 className={classes.loginTitle}>{title}</h1>
                 <label className={classes.loginLabel}>
                     Логин
                     <input

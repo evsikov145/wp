@@ -1,0 +1,28 @@
+.adminNav {
+  max-width: 170px;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #0e1935;
+}
+
+.logo {
+  min-height: 60px;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav__link {
+  color: white;
+  font-size: 20px;
+  padding: 20px 30px;
+}
+
+.nav__linkActive {
+  border-left: 5px solid #5b90ff;
+  background: #122043;
+}
