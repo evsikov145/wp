@@ -1,16 +1,9 @@
-import Login from "../../components/admin/Login";
+import Login from "../../components/admin/login/Login";
 
-export default function Index({data}) {
-
+export default function Index() {
     return (
         <>
-            <Login props={data}/>
+            <Login/>
         </>
     )
-}
-
-export async function getServerSideProps() {
-    const res = await fetch(`http://localhost:3000/api/user`)
-    const data = await res.json()
-    return { props: { data } }
 }

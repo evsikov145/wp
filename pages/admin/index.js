@@ -1,11 +1,10 @@
-import AdminNav from "../../components/admin/AdminNav";
-import AdminHome from "../../components/admin/AdminHome";
+import AdminHome from "../../components/admin/home/AdminHome";
+import {AdminLayout} from "../../components/AdminLayout";
 
 export default function Admin() {
     return (
-        <section className="admin">
-            <AdminNav/>
+        <AdminLayout title={'Стартовая'}>
             <AdminHome/>
-        </section>
+        </AdminLayout>
     )
 }

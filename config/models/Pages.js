@@ -21,22 +21,8 @@ const Pages = sequelize.define("pages", {
     }
 });
 
-sequelize.sync().then(result=>{
-
-})
+sequelize.sync()
+    .then(result=>{})
     .catch(err=> console.log(err));
-
-/*Pages.create({
-    id: 'main',
-    head1: 'Рубцова',
-    head2: "Елена",
-    head3: "Свадебный фотограф",
-    desc: "Фотографии сделанные с душой"
-}).then((result) => {
-
-})
-    .catch(err => {
-        console.log(err)
-    })*/
 
 export default Pages;

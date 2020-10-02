@@ -1,4 +1,4 @@
-import Pages from '../../config/models/Pages'
+import Pages from '../../../config/models/Pages'
 
 export default (req, res) => {
     Pages.findByPk('main')

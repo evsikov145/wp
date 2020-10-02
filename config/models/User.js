@@ -19,9 +19,8 @@ const User = sequelize.define("user", {
     }
 });
 
-sequelize.sync().then(result => {
-
-})
+sequelize.sync()
+    .then(result => {})
     .catch(err => console.log(err));
 
 export default User;
