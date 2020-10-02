@@ -2,8 +2,8 @@ import {useState} from 'react'
 import classes from './Login.module.scss'
 import Router from 'next/router'
 
-export default function Login(){
-
+export default function Login({users}){
+    console.log(users)
     const [login, setLogin] = useState('');
     const [password, setPassword] = useState('')
     const [title, setTitle] = useState('Для доступа введите логин и пароль')
