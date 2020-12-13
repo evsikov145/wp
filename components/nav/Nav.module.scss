@@ -8,7 +8,7 @@
   z-index: 3;
 }
 
-.nav__link {
+.link {
    padding-left: 75px;
    font-size: 30px;
    color: #4B4A46;
@@ -19,13 +19,13 @@
    transition: .5s;
    display: flex;
    align-items: center;
+  &:hover {
+    background-color: #ffffff;
+    transition: .5s;
+  }
 }
 
-.nav__linkActive {
-   background-color: #ffffff;
-   transition: .5s;
- }
-.nav__link:hover {
+.active {
    background-color: #ffffff;
    transition: .5s;
  }

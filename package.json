@@ -10,6 +10,7 @@
     "mock": "json-server -w db.json -p 4200 -d 450"
   },
   "dependencies": {
+    "@zeit/next-css": "^1.0.1",
     "dotenv": "^8.2.0",
     "mysql2": "^2.2.2",
     "next": "9.5.3",
