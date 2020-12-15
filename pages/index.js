@@ -4,7 +4,6 @@ import Main from "../components/main/Main";
 import { initializeStore } from '../store/store'
 
 export default function Index() {
-
     return (
         <>
             <Head>
@@ -23,7 +22,7 @@ export default function Index() {
     )
 }
 
-export function getServerSideProps() {
+/*export function getServerSideProps() {
     const reduxStore = initializeStore()
     const { dispatch } = reduxStore
 
@@ -34,4 +33,5 @@ export function getServerSideProps() {
     })
 
     return { props: { initialReduxState: reduxStore.getState() } }
-}
+
+}*/
