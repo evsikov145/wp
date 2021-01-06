@@ -14,4 +14,4 @@ const Layout = ({isMainPage,isAboutPage, children}) => {
     )
 }
 
- export default Layout;
+export default Layout;

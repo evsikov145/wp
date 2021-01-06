@@ -2,26 +2,14 @@ import {initialState} from '../store/store'
 
 export const reducer = (state = initialState, action) => {
     switch (action.type) {
-        case 'TICK':
+        case 'GET_ABOUT_TEXT':
             return {
-                ...state,
-                lastUpdate: action.lastUpdate,
-                light: !!action.light,
+                ...state
             }
-        case 'INCREMENT':
+        case 'UPDATE_ABOUT_TITLE':
             return {
                 ...state,
-                count: state.count + 1,
-            }
-        case 'DECREMENT':
-            return {
-                ...state,
-                count: state.count - 1,
-            }
-        case 'RESET':
-            return {
-                ...state,
-                count: initialState.count,
+                title: action.payload
             }
         default:
             return state

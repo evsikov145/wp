@@ -6,9 +6,22 @@ import {reducer} from "../reducers/reducer";
 let store
 
 export const initialState = {
-    lastUpdate: 0,
-    light: false,
-    count: 0,
+    about: {
+        title: 'Познакомимся?',
+        secondTitle: 'Что для меня значит быть вашим свадебным фотографом?',
+        thirdTitle: 'Моя специализация',
+        desc: 'Быть вашим другом, помощником и даже немного наставником, ведь фотограф - это ключевой человек,' +
+            ' который сохранит важные моменты в вашей жизни на долгую, долгую память). Для меня свадьба - это больше,' +
+            ' чем просто съемка. Это прекрасный повод побывать в центре такого события, ощутить все эмоции,' +
+            ' которые вы испытываете единожды в своей жизни.',
+        items: [
+            {id:1, title: 'Свадебная съёмка', img1: '/static/images/svg/wedding-1.svg', img2: '/static/images/svg/wedding-2.svg'},
+            {id:2, title: 'Love Story', img1: '/static/images/svg/story-1.svg', img2: '/static/images/svg/story-2.svg'},
+            {id:3, title: 'Портретная съёмка', img1: '/static/images/svg/portrait-1.svg', img2: '/static/images/svg/portrait-2.svg'},
+        ],
+        btnText: 'Обсудим Вашу фотосессию?',
+        pic: '/static/images/about/about-bg.jpg'
+    }
 }
 
 function initStore(preloadedState = initialState) {

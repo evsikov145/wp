@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Layout from "../components/Layout";
 import Main from "../components/main/Main";
 import { initializeStore } from '../store/store'
+import React from "react";
 
 export default function Index() {
     return (
@@ -22,16 +23,4 @@ export default function Index() {
     )
 }
 
-/*export function getServerSideProps() {
-    const reduxStore = initializeStore()
-    const { dispatch } = reduxStore
 
-    dispatch({
-        type: 'TICK',
-        light: false,
-        lastUpdate: Date.now(),
-    })
-
-    return { props: { initialReduxState: reduxStore.getState() } }
-
-}*/
