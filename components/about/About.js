@@ -1,55 +1,54 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import classes from './About.module.scss'
+import {useDispatch, useSelector} from "react-redux";
 
 const About = () => {
+
+   const {about} = useSelector(state => state);
+   const dispatch = useDispatch;
+
+   const updateTitle = () => {
+       const newTitle = 'Обновлён!'
+       dispatch({
+           type: 'UPDATE_ABOUT_TITLE',
+           payload: newTitle
+       });
+    }
+
     return (
         <>
-            <section className={classes.about}>
+            {about && <section className={classes.about}>
                 <div className={classes.content}>
                     <div className={classes.title}>
-                        <h1>Познакомимся?</h1>
+                        <h1>{about.title}</h1>
                     </div>
                     <div className={classes.desc}>
-                        <h2>Что для меня значит быть вашим свадебным фотографом?</h2>
-                        <p>Быть вашим другом, помощником и даже немного наставником, ведь фотограф - это ключевой человек,
-                            который сохранит важные моменты в вашей жизни на долгую, долгую память). Для меня свадьба - это больше, чем просто съемка.
-                            Это прекрасный повод побывать в центре такого события, ощутить все эмоции, которые вы испытываете единожды в своей жизни.</p>
+                        <h2>{about.secondTitle}</h2>
+                        <p>{about.desc}</p>
                     </div>
                     <div className={classes.specialization}>
-                        <h2>Моя специализация</h2>
+                        <h2>{about.thirdTitle}</h2>
                         <div className={classes.block}>
-                            <div className={classes.item}>
-                                <div className={classes.img}>
-                                    <img className={classes.images} src="/static/images/svg/wedding-1.svg" alt=""/>
-                                    <img className={classes.first} src="/static/images/svg/wedding-2.svg" alt=""/>
+                            {about.items.map((item, i) => (
+                                <div className={classes.item} key={item.id}>
+                                    <div className={classes.img}>
+                                        <img className={classes.images} src={item.img1} alt=""/>
+                                        <img className={i===0 ? `${classes.first}`: i===1 ? `${classes.second}` : `${classes.third}`} src={item.img2} alt=""/>
+                                    </div>
+                                    <h3>{item.title}</h3>
                                 </div>
-                                <h3>Свадебная съемка</h3>
-                            </div>
-                            <div className={classes.item}>
-                                <div className={classes.img}>
-                                    <img className={classes.images} src="/static/images/svg/story-1.svg" alt=""/>
-                                    <img className={classes.second} src="/static/images/svg/story-2.svg" alt=""/>
-                                </div>
-                                <h3>Love Story</h3>
-                            </div>
-                            <div className={classes.item}>
-                                <div className={classes.img}>
-                                    <img className={classes.images} src="/static/images/svg/portrait-1.svg" alt=""/>
-                                    <img className={classes.third} src="/static/images/svg/portrait-2.svg" alt=""/>
-                                </div>
-                                <h3>Портретная съемка</h3>
-                            </div>
+                            ))}
                         </div>
-                        <button className={classes.btn}>Обсудим Вашу фотосессию?</button>
+                        <button className={classes.btn} onClick={() => updateTitle()}>{about.btnText}</button>
                     </div>
 
                 </div>
                 <div className={classes.pic}>
-                    <img src="/static/images/about/about-bg.jpg" alt=""/>
+                    <img src={about.pic} alt=""/>
                 </div>
 
 
-            </section>
+            </section>}
         </>
     )
 }
