@@ -1,3 +1,5 @@
+@import "styles/variables";
+
 .pagination {
   display: flex;
   align-items: center;
@@ -14,13 +16,13 @@
 
 .about {
   background: white;
-  .current {
-    color: #262B38;
-    font-weight: 500;
-  }
   .page {
-    color: #262B38;
-    font-weight: 200;
+    color: $color-blue-dark;
+    font-weight: 100;
+  }
+  .current {
+    color: $color-blue-dark;
+    font-weight: 500;
   }
   .left {
     background: url("../../public/static/images/svg/left-dark.svg") center no-repeat;
@@ -54,9 +56,9 @@
 
 .page{
   width: 20px;
-  font-size: 31px;
-  color: #ffffff;
-  font-weight: 300;
+  font-size: 30px;
+  color: $color-white;
+  font-weight: 100;
   text-align: center;
   margin: 0 5px;
 }

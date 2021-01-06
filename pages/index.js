@@ -1,10 +1,13 @@
 import Head from 'next/head'
 import Layout from "../components/Layout";
 import Main from "../components/main/Main";
-import { initializeStore } from '../store/store'
 import React from "react";
+import {useSelector} from "react-redux";
 
-export default function Index() {
+const Index = () => {
+
+    const {main} = useSelector(state => state)
+
     return (
         <>
             <Head>
@@ -16,11 +19,13 @@ export default function Index() {
             </Head>
 
             <Layout isMainPage={true}>
-                <Main/>
+                {main && <Main main={main}/>}
             </Layout>
 
         </>
     )
 }
+
+export default Index;
 
 

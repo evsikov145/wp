@@ -1,3 +1,5 @@
+@import "styles/variables";
+
 .about {
   display: flex;
   padding: 50px 40px 50px 0;
@@ -9,37 +11,24 @@
   width: 70%;
 }
 
-.title {
-  padding: 10px 60px;
-  margin-bottom: 40px;
-  background: white;
-  text-align: right;
-  h1 {
-    font-size: 80px;
-    color: #262B38;
-    text-transform: uppercase;
-  }
-}
-
 .desc {
   padding: 30px;
   margin-bottom: 60px;
-  max-width: 650px;
+  max-width: 550px;
   margin-left: auto;
+  margin-right: 80px;
   h2 {
-    font-family: 'Kontora', Arial, sans-serif;
     font-weight: bold;
     font-size: 24px;
     margin-bottom: 30px;
     text-decoration: underline;
     line-height: 130%;
-    color: #262B38;
+    color: $color-blue-dark;
     text-transform: none;
     letter-spacing: normal;
   }
   p {
-    font-family: 'Kontora', Arial, sans-serif;
-    color: #262B38;
+    color: $color-blue-dark;
     font-size: 18px;
     line-height: 130%;
     margin-bottom: 0;
@@ -47,18 +36,16 @@
 }
 
 .specialization {
-  max-width: 560px;
+  max-width: 550px;
   margin-left: auto;
   padding-right: 110px;
 
   h2 {
-    text-align: center;
-    color: black;
+    color: $color-blue-dark;
     font-size: 24px;
     line-height: 24px;
     font-weight: bold;
-    font-family: 'Kontora', Arial, sans-serif;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     text-transform: none;
     letter-spacing: normal;
   }
@@ -68,22 +55,27 @@
   text-align: center;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
 }
 
 .item {
-  max-width: 110px;
+  padding: 10px 0;
+  max-width: 170px;
   width: 100%;
   cursor: pointer;
+  transition: .5s;
+  text-align: center;
   h3 {
     font-weight: normal;
-    font-family: 'Kontora', Arial, sans-serif;
-    color: #000000;
+    color: $color-blue-dark;
     font-size: 18px;
     line-height: 130%;
-    margin-bottom: 0;
+    max-width: 110px;
+    margin: 0 auto;
   }
   &:hover {
+    transition: .5s;
+    background: $color-beige;
     .first {
       animation: pulse 2s ease-in 0s infinite reverse;
     }
@@ -110,7 +102,7 @@
   .first {
     position: absolute;
     bottom: 22px;
-    right: 21px;
+    right: 51px;
   }
   .second {
     position: absolute;
@@ -120,21 +112,6 @@
     position: absolute;
     bottom: 19px;
   }
-}
-
-.btn {
-  cursor: pointer;
-  outline: none;
-  border: none;
-  background: #262B38;
-  box-shadow: 0 0 9px 2px rgba(0, 0, 0, 0.21);
-  border-radius: 2px;
-  font-size: 18px;
-  line-height: 18px;
-  color: #FFFFFF;
-  font-family: 'Kontora', Arial, sans-serif;
-  font-weight: bold;
-  padding: 20px 35px;
 }
 
 .pic {
@@ -150,7 +127,7 @@
     content: "";
     width: 475px;
     height: 475px;
-    background: white;
+    background: $color-white;
     position: absolute;
     z-index: 1;
     top: -20px;

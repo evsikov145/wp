@@ -1,0 +1,70 @@
+@import "styles/_variables";
+
+.title {
+    position: absolute;
+    right: 75px;
+    top: 280px;
+    max-width: 860px;
+    text-align: center;
+    z-index: 5;
+    h2 {
+      font-size: 125px;
+      line-height: 166px;
+      color: $color-white;
+      font-family: $font-pt;
+      font-weight: 400;
+      margin-bottom: 50px;
+    }
+    h1 {
+      font-family: $font-kontora;
+      text-transform: none;
+      font-size: 36px;
+      line-height: 130%;
+      letter-spacing: 0.05em;
+      color: $color-white;
+      font-weight: 400;
+      margin-bottom: 15px;
+    }
+}
+
+.photo {
+    font-size: 0;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 1545px;
+    height: 359px;
+    background: url("../../public/static/images/main/text.png") center no-repeat;
+    background-size: 1545px 359px;
+    animation: move-photo 2s ease-in 0s 1 normal;
+}
+
+@keyframes move-photo {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.circle {
+    font-size: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1170px;
+    height: 1012px;
+    background: url("../../public/static/images/svg/circle.svg") center no-repeat;
+    background-size: 1302px;
+    animation: move-circle 2s ease-in 0s 1 normal;
+}
+
+@keyframes move-circle {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

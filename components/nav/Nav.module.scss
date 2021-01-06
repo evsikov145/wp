@@ -1,3 +1,5 @@
+@import "styles/variables";
+
 .nav {
   position: absolute;
   left: 0;
@@ -11,8 +13,8 @@
 .link {
    padding-left: 75px;
    font-size: 30px;
-   color: #4B4A46;
-   background-color: #EAC5B3;
+   color: $color-blue-dark;
+   background-color: $color-beige;
    width: 100%;
    min-height: 66px;
    margin-bottom: 3px;
@@ -20,13 +22,13 @@
    display: flex;
    align-items: center;
   &:hover {
-    background-color: #ffffff;
+    background-color: $color-white;
     transition: .5s;
   }
 }
 
 .active {
-   background-color: #ffffff;
+   background-color: $color-white;
    transition: .5s;
  }
 

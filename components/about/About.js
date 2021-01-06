@@ -1,25 +1,16 @@
-import React, {useState, useEffect} from "react";
+import React from "react";
 import classes from './About.module.scss'
-import {useDispatch, useSelector} from "react-redux";
+import {useSelector} from "react-redux";
 
 const About = () => {
 
    const {about} = useSelector(state => state);
-   const dispatch = useDispatch;
-
-   const updateTitle = () => {
-       const newTitle = 'Обновлён!'
-       dispatch({
-           type: 'UPDATE_ABOUT_TITLE',
-           payload: newTitle
-       });
-    }
 
     return (
         <>
             {about && <section className={classes.about}>
                 <div className={classes.content}>
-                    <div className={classes.title}>
+                    <div className="title">
                         <h1>{about.title}</h1>
                     </div>
                     <div className={classes.desc}>
@@ -39,7 +30,7 @@ const About = () => {
                                 </div>
                             ))}
                         </div>
-                        <button className={classes.btn} onClick={() => updateTitle()}>{about.btnText}</button>
+                        <button className={classes.btn}>{about.btnText}</button>
                     </div>
 
                 </div>

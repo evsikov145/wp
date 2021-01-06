@@ -4,44 +4,73 @@
 }
 
 body {
-  font-family: 'Kontora', Arial, sans-serif;
+  font-family: $font-kontora;
   line-height: 1;
+  font-weight: 400;
+}
+
+h1 {
+  font-family: $font-prata;
+  font-weight: 400;
+  font-size: 80px;
+  line-height: 108px;
+  text-transform: uppercase;
+  color: $color-blue-dark;
+}
+
+label {
+  display: block;
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: $color-blue-dark;
+}
+
+input {
+  line-height: 1;
+  outline: none;
+  border: none;
+  width: calc(100% - 60px);
+  background: #FFFFFF;
+  border-radius: 2px;
+  font-size: 18px;
+  padding: 20px 30px;
+  &::placeholder{
+    color: #C4C4C4;
+    font-size: 18px;
+  }
+}
+
+textarea {
+  font-size: 18px;
+  outline: none;
+  border: none;
+  width: calc(100% - 60px);
+  resize: none;
+  min-height: 145px;
+  padding: 20px 30px;
+  background: #FFFFFF;
+  border-radius: 2px;
+  &::placeholder{
+    color: #C4C4C4;
+    font-size: 18px;
+  }
 }
 
 a {
   text-decoration: none;
 }
 
-h1 {
-  font-family: 'FoglihtenNo06', "Times New Roman", serif;
-  font-size: 120px;
-  text-transform: uppercase;
-  color: #fff;
-  letter-spacing: 5px;
-  font-weight: 400;
-}
-
-h2 {
-  font-family: 'FoglihtenNo06', "Times New Roman", serif;
-  font-size: 72px;
-  text-transform: uppercase;
-  color: #fff;
-  letter-spacing: 5px;
-  font-weight: 400;
-}
-
-h3 {
-  font-size: 31px;
-  font-weight: 300;
-  color: #fff;
-  letter-spacing: 1px;
-}
-
 button {
   outline: none;
   border: none;
-}
-
-input {
-  outline: none;
+  border-radius: $button-radius;
+  box-shadow: $button-shadow;
+  cursor: pointer;
+  background: $color-blue-dark;
+  font-size: 18px;
+  line-height: 18px;
+  color: $color-white;
+  font-weight: bold;
+  padding: 20px 35px;
+  font-family: $font-kontora;
 }
