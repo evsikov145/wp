@@ -1,7 +1,7 @@
 @font-face{
-  font-family: 'FoglihtenNo06';
-  src: url('../../public/static/fonts/FoglihtenNo06.otf');
-  font-weight: 400;
+  font-family: 'Kontora';
+  src: url('../../public/static/fonts/Kontora Thin.otf');
+  font-weight: 100;
   font-style: normal;
   font-display: swap;
 }
@@ -17,6 +17,38 @@
 @font-face{
   font-family: 'Kontora';
   src: url('../../public/static/fonts/Kontora Regular.otf');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face{
+  font-family: 'Kontora';
+  src: url('../../public/static/fonts/Kontora Medium.otf');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face{
+  font-family: 'Kontora';
+  src: url('../../public/static/fonts/Kontora Bold.otf');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face{
+  font-family: 'Prata';
+  src: url('../../public/static/fonts/Prata Regular.ttf');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face{
+  font-family: 'PTSerif';
+  src: url('../../public/static/fonts/PTSerif Regular.ttf');
   font-weight: 400;
   font-style: normal;
   font-display: swap;

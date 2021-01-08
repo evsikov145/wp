@@ -1,3 +1,5 @@
+@import "styles/variables";
+
 .social {
   display: flex;
   justify-content: space-between;
@@ -12,15 +14,15 @@
 }
 
 .link {
-  font-size: 31px;
+  font-size: 30px;
   font-weight: 300;
-  color: #ffffff;
+  color: $color-white;
+  text-shadow: $text-shadow;
 }
 
 .dark {
   .link {
-    color: #3A3A3A;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 0.27);
+    color: $color-gray;
   }
 }
 

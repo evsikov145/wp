@@ -1,0 +1,8 @@
+{
+  "work" : [
+    {"id":  1, "title" :  "1ая работа", "body": "Lorem ipsum...."},
+    {"id":  2, "title" :  "2ая работа", "body": "Lorem ipsum...."},
+    {"id":  3, "title" :  "3ая работа", "body": "Lorem ipsum...."},
+    {"id":  4, "title" :  "4ая работа", "body": "Lorem ipsum...."}
+  ]
+}

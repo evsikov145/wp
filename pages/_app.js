@@ -2,7 +2,7 @@ import '../styles/index.scss'
 import NextNprogress from "nextjs-progressbar";
 import React from "react";
 import { Provider } from 'react-redux'
-import { useStore } from '../store/store'
+import {initializeStore, useStore} from '../store/store'
 
 function MyApp({ Component, pageProps }) {
     const store = useStore(pageProps.initialReduxState)
@@ -20,6 +20,11 @@ function MyApp({ Component, pageProps }) {
           </Provider>
       </>
     )
+}
+
+export function getServerSideProps() {
+    const reduxStore = initializeStore()
+    return { props: { initialReduxState: reduxStore.getState() } }
 }
 
 export default MyApp
