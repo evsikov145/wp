@@ -32,7 +32,7 @@ function PaginationPage({main, about, contacts, portfolio}) {
                 <Link href={'/contacts'}><a className={`${classes.arrow} ${classes.right}`}>arrowRight</a></Link>
             </section>}
             {contacts && <section className={classes.pagination}>
-                <Link href={'/about'}><a className={`${classes.arrow} ${classes.left}`}>arrowLeft</a></Link>
+                <Link href={'/portfolio'}><a className={`${classes.arrow} ${classes.left}`}>arrowLeft</a></Link>
                 <div className={classes.block}>
                     <div className={classes.page}>3</div>
                     <div className={classes.page}>/</div>
