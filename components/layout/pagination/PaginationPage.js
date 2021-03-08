@@ -6,6 +6,7 @@ function PaginationPage({main, about, contacts, portfolio}) {
     return(
         <>
             {main && <section className={classes.pagination}>
+                <Link href={'/contacts'}><a className={`${classes.arrow} ${classes.left}`}>leftRight</a></Link>
                <div className={classes.block}>
                     <div className={`${classes.page} ${classes.current}`}>1</div>
                     <div className={classes.page}>/</div>
@@ -34,10 +35,11 @@ function PaginationPage({main, about, contacts, portfolio}) {
             {contacts && <section className={classes.pagination}>
                 <Link href={'/portfolio'}><a className={`${classes.arrow} ${classes.left}`}>arrowLeft</a></Link>
                 <div className={classes.block}>
-                    <div className={classes.page}>3</div>
-                    <div className={classes.page}>/</div>
                     <div className={`${classes.page} ${classes.current}`}>4</div>
+                    <div className={classes.page}>/</div>
+                    <div className={classes.page}>4</div>
                 </div>
+                <Link href={'/'}><a className={`${classes.arrow} ${classes.right}`}>arrowRight</a></Link>
             </section>}
 
     </>

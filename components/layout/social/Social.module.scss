@@ -1,0 +1,52 @@
+@import "../../../styles/variables";
+
+.social {
+  grid-area: social;
+  align-self: center;
+  justify-self: center;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 178px;
+  width: 100%;
+  animation: move-social 2s ease-in 0s 1 normal;
+}
+
+.link {
+  font-size: 30px;
+  font-weight: 300;
+  color: $color-white;
+  text-shadow: $text-shadow;
+}
+
+.dark {
+  .link {
+    color: $color-gray;
+  }
+}
+
+@keyframes move-social {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media all and (max-width: 600px){
+  .social {
+    justify-self: start;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-left: 40px;
+  }
+  .link {
+    margin-bottom: 40px;
+    &:nth-last-of-type(1){
+      margin-bottom: 0;
+    }
+  }
+}

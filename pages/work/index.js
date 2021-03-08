@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Layout from "../../components/Layout";
+import Layout from "../../components/layout/Layout";
 import Error from "../../components/error/Error";
 import {useState, useEffect} from 'react'
 import Link from "next/link";

@@ -1,5 +1,6 @@
 import React from 'react'
 import classes from './Portfolio.module.scss'
+import Link from "next/link";
 
 const Portfolio = () => {
     return(
@@ -16,10 +17,13 @@ const Portfolio = () => {
                         Это прекрасный повод побывать в центре такого события, ощутить все эмоции, которые вы испытываете единожды в своей жизни.</p>
                 </div>
                 <div className={classes.slider}>
-                    <div className={classes.item}>
-                        <h3>Свадебная фотосессия</h3>
-                        <img src="/static/images/portfolio/wedding.jpg" alt=""/>
-                    </div>
+                    <Link href={'/portfolio/1'}>
+                        <a className={classes.item}>
+                            <h3>Свадебная фотосессия</h3>
+                            <img src="/static/images/portfolio/wedding.jpg" alt=""/>
+                        </a>
+                    </Link>
+
                     <div className={classes.item}>
                         <h3>Портретная фотосъемка</h3>
                         <img src="/static/images/portfolio/portrait.jpg" alt=""/>

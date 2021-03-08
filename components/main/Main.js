@@ -9,8 +9,6 @@ const Main = ({main}) => {
                 <h2>{main.name}</h2>
                 <button>{main.btnText}</button>
             </div>
-            <div className={classes.photo}>photo</div>
-            <div className={classes.circle}>circle</div>
         </>
     )
 }

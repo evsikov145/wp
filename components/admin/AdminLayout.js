@@ -1,6 +1,6 @@
 import Head from 'next/head'
-import AdminNav from "./admin/nav/AdminNav";
-import Logout from "./logout/Logout";
+import AdminNav from "./nav/AdminNav";
+import Logout from "../logout/Logout";
 
 export function AdminLayout({children, title='Home'}){
 

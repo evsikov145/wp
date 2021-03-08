@@ -1,13 +1,11 @@
-@import "styles/variables";
+@import "../../../styles/variables";
 
 .nav {
-  position: absolute;
-  left: 0;
-  top: 299px;
-  max-width: 270px;
+  grid-area: nav;
+  z-index: 2;
   width: 100%;
-  min-height: 280px;
-  z-index: 3;
+  max-width: 270px;
+  align-self: center;
 }
 
 .link {
@@ -81,5 +79,11 @@
   }
   to {
     margin-left: 0;
+  }
+}
+
+@media all and (max-width: 1000px){
+  .nav {
+    display: none;
   }
 }

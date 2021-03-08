@@ -6,11 +6,6 @@ import {reducer} from "../reducers/reducer";
 let store
 
 export const initialState = {
-    main : {
-        profession: 'Фотограф',
-        name: 'Елена Рубцова',
-        btnText: 'Записаться на фотосессию'
-    },
     about: {
         title: 'Познакомимся?',
         secondTitle: 'Привет!',

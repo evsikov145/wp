@@ -1,4 +1,4 @@
-import {AdminLayout} from "../../components/AdminLayout";
+import {AdminLayout} from "../../components/admin/AdminLayout";
 import Users from "../../components/admin/users/Users";
 
 export default function UsersPage() {

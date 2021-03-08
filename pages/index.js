@@ -1,12 +1,15 @@
 import Head from 'next/head'
-import Layout from "../components/Layout";
+import Layout from "../components/layout/Layout";
 import Main from "../components/main/Main";
 import React from "react";
-import {useSelector} from "react-redux";
 
 const Index = () => {
 
-    const {main} = useSelector(state => state)
+    const main = {
+        profession: 'Фотограф',
+        name: 'Елена Рубцова',
+        btnText: 'Записаться на фотосессию'
+    }
 
     return (
         <>

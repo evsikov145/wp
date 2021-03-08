@@ -1,4 +1,4 @@
-import Layout from "../../components/Layout";
+import Layout from "../../components/layout/Layout";
 import React from "react";
 import AboutComponent from '../../components/about/About'
 import Head from "next/head";
