@@ -3,28 +3,26 @@ import classes from "./Contacts.module.scss"
 
 const Contacts = ({contacts}) => {
     return (
-        <section className={classes.contacts}>
-            <div className={classes.content}>
-                <div className="title title--contacts">
-                    <h1>{contacts.title}</h1>
-                </div>
-                <div className={classes.block}>
-                    <h2>{contacts.secondTitle}</h2>
-                    <div className={classes.form}>
-                        <div className={classes.item}>
-                            <label htmlFor="name">Ваше имя</label>
-                            <input id="name" type="text" placeholder="Мария"/>
-                        </div>
-                        <div className={classes.item}>
-                            <label htmlFor="tel">Номер телефона</label>
-                            <input id="tel" type="text" placeholder="+7 (999) 999 99 99"/>
-                        </div>
-                        <div className={classes.item}>
-                            <label htmlFor="text">Сообщение</label>
-                            <textarea id="text" placeholder="Не могу как хочу новогоднюю фотосессию! Лена, когда у Вас свободна дата?"></textarea>
-                        </div>
-                        <button className={classes.btn}>Отправить</button>
+        <>
+            <div className={classes.title}>
+                <h1>{contacts.title}</h1>
+            </div>
+            <div className={classes.block}>
+                <h2>{contacts.secondTitle}</h2>
+                <div className={classes.form}>
+                    <div className={classes.item}>
+                        <label htmlFor="name">Ваше имя</label>
+                        <input id="name" type="text" placeholder="Мария"/>
                     </div>
+                    <div className={classes.item}>
+                        <label htmlFor="tel">Номер телефона</label>
+                        <input id="tel" type="text" placeholder="+7 (999) 999 99 99"/>
+                    </div>
+                    <div className={classes.item}>
+                        <label htmlFor="text">Сообщение</label>
+                        <textarea id="text" placeholder="Не могу как хочу новогоднюю фотосессию! Лена, когда у Вас свободна дата?"></textarea>
+                    </div>
+                    <button className={classes.btn}>Отправить</button>
                 </div>
             </div>
             <div className={classes.desc}>
@@ -39,7 +37,7 @@ const Contacts = ({contacts}) => {
                     <p>{contacts.email}</p>
                 </div>
             </div>
-        </section>
+        </>
     )
 }
 

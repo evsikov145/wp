@@ -6,7 +6,7 @@ import css from './Layout.module.scss'
 
 const Layout = ({isMainPage,isAboutPage,isContactsPage,isPortfolioPage,isCategoryPage, children}) => {
     return (
-        <section className={isMainPage ? `${css.layout} ${css.main}` : isContactsPage ? "layout contacts" : isCategoryPage ? 'layout category' : `${css.layout}`}>
+        <section className={isMainPage ? `${css.layout} ${css.main}` : isContactsPage ? `${css.layout} ${css.contacts}` : isCategoryPage ? `${css.layout} ${css.category}` : `${css.layout}`}>
             <Nav category={isCategoryPage}/>
             <Social dark={isAboutPage || isCategoryPage}/>
             <PaginationPage main={isMainPage} about={isAboutPage} contacts={isContactsPage} portfolio={isPortfolioPage}/>

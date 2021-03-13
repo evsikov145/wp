@@ -9,7 +9,7 @@
 }
 
 .link {
-   padding-left: 75px;
+  padding-left: 75px;
    font-size: 30px;
    color: $color-blue-dark;
    background-color: $color-beige;
@@ -79,6 +79,15 @@
   }
   to {
     margin-left: 0;
+  }
+}
+
+@media all and (max-width: 1300px){
+  .nav {
+    max-width: 200px;
+  }
+  .link {
+    padding-left: 30px;
   }
 }
 

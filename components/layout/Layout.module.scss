@@ -5,17 +5,17 @@
   min-height: 100vh;
   color: $color-white;
   display: grid;
+  overflow: hidden;
+}
+
+.main {
   grid-template-areas:
     "title title right"
     "nav content right"
     "social content page";
-  grid-template-rows: 180px 1fr 120px;
-  grid-template-columns: 345px 2fr 1fr;
+  grid-template-rows: 180px 3fr 120px;
+  grid-template-columns: 1fr 2fr 1fr;
   grid-column-gap: 10px;
-}
-
-
-.main {
   background: url("../../public/static/images/main/main-bg.png") center no-repeat;
   background-size: cover;
   position: relative;
@@ -45,6 +45,22 @@
   }
 }
 
+.contacts {
+  grid-template-areas:
+    "title title right"
+    "nav content right"
+    "social content page";
+  grid-template-rows: 180px 3fr 120px;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-column-gap: 10px;
+  background: url("../../public/static/images/contacts/contacts-bg.jpg") center no-repeat;
+  background-size: cover;
+}
+
+.category {
+  background: rgba(239, 226, 220, 0.31);
+}
+
 @keyframes move-photo {
   from {
     opacity: 0;
@@ -72,15 +88,13 @@
 }
 
 @media all and (max-width: 1000px){
-  .layout {
+  .main {
     grid-template-areas:
     "title menu"
     "content content"
     "social page";
-    grid-template-rows: 150px 1fr 150px;
+    grid-template-rows: 180px 1fr 120px;
     grid-template-columns: 2fr 1fr;
-  }
-  .main {
     background: url("../../public/static/images/main/main-table.jpg") center no-repeat;
     background-size: cover;
     &::before {
@@ -90,11 +104,24 @@
       height: 100%;
     }
   }
+  .contacts {
+    grid-template-areas:
+    "title title"
+    "content content"
+    "right right"
+    "social page";
+    grid-template-rows: 180px 1fr 0.5fr 120px;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+  }
 }
 
 @media all and (max-width: 600px){
   .main {
     background: url("../../public/static/images/main/main-phone.jpg") center no-repeat;
     background-size: cover;
+  }
+  .contacts {
+    grid-template-rows: 100px 1fr 0.5fr 120px;
   }
 }

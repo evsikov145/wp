@@ -7,9 +7,9 @@
   justify-self: stretch;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   animation: move-pagination 2s ease-in 0s 1 normal;
-  width: 100%;
+  margin-right: 80px;
   min-height: 80px;
   position: relative;
 }
@@ -83,6 +83,6 @@
 
 @media all and (max-width: 600px){
   .pagination {
-    margin-right: 80px;
+    margin-right: 40px;
   }
 }
