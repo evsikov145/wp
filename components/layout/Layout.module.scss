@@ -82,6 +82,13 @@
 
 .category {
   background: rgba(239, 226, 220, 0.31);
+  grid-template-areas:
+    "title title title"
+    "nav content content"
+    "social content content";
+  grid-template-rows: 180px 2fr 120px;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-gap: 20px;
 }
 
 @keyframes move-photo {
@@ -153,6 +160,14 @@
     "list list"
     "social page";
     grid-template-rows: 180px 0.5fr 2fr 0.5fr 120px;
+    grid-template-columns: 1fr 1fr;
+  }
+  .category {
+    grid-template-areas:
+    "title title"
+    "content content"
+    "social .";
+    grid-template-rows: 180px 2fr 120px;
     grid-template-columns: 1fr 1fr;
   }
 }
