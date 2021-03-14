@@ -4,6 +4,9 @@ import React from "react";
 import { Provider } from 'react-redux'
 import {initializeStore, useStore} from '../store/store'
 
+import "../styles/slick.css";
+
+
 function MyApp({ Component, pageProps }) {
     const store = useStore(pageProps.initialReduxState)
     return (

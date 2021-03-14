@@ -4,12 +4,12 @@
   grid-area: page;
   z-index: 2;
   align-self: center;
-  justify-self: stretch;
   display: flex;
+  justify-self: right;
+  padding: 0 80px 0 40px;
   align-items: center;
   justify-content: flex-end;
   animation: move-pagination 2s ease-in 0s 1 normal;
-  margin-right: 80px;
   min-height: 80px;
   position: relative;
 }
@@ -83,6 +83,6 @@
 
 @media all and (max-width: 600px){
   .pagination {
-    margin-right: 40px;
+    padding-right: 40px;
   }
 }

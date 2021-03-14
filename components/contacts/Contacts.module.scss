@@ -97,6 +97,11 @@
 }
 
 @media all and (max-width: 1000px){
+  .title {
+    h1 {
+      font-size: 60px;
+    }
+  }
   .pic {
     margin-right: 30px;
   }
@@ -139,5 +144,15 @@
   .form {
     padding: 30px 20px;
     max-width: none;
+  }
+}
+
+@media all and (max-width: 470px) {
+  .title {
+    padding: 0 10px;
+    h1 {
+
+      font-size: 30px;
+    }
   }
 }

@@ -57,6 +57,29 @@
   background-size: cover;
 }
 
+.about {
+  background: rgba(239, 226, 220, 0.31);
+  grid-template-areas:
+    "title title right"
+    "nav content right"
+    "social content page";
+  grid-template-rows: 180px 3fr 120px;
+  grid-template-columns: 1fr 2fr 1.25fr;
+  grid-column-gap: 10px;
+}
+
+.portfolio {
+ background: #262B38;
+  grid-template-areas:
+    "title title right"
+    "nav content right"
+    ". list list"
+    "social . page";
+  grid-template-rows: 180px 2fr 1fr 120px;
+  grid-template-columns: 1fr 2fr 1.25fr;
+  grid-column-gap: 10px;
+}
+
 .category {
   background: rgba(239, 226, 220, 0.31);
 }
@@ -114,6 +137,36 @@
     grid-template-columns: 1fr 1fr;
     grid-gap: 20px;
   }
+  .about {
+    grid-template-areas:
+    "title title"
+    "content right"
+    "social page";
+    grid-template-rows: 180px 3fr 120px;
+    grid-template-columns: 1fr 1fr;
+  }
+  .portfolio {
+    grid-template-areas:
+    "title title"
+    "content content"
+    "right right"
+    "list list"
+    "social page";
+    grid-template-rows: 180px 0.5fr 2fr 0.5fr 120px;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media all and (max-width: 800px){
+  .about {
+    grid-template-areas:
+    "title title"
+    "right right"
+    "content content"
+    "social page";
+    grid-template-rows: 180px 0.5fr 1fr 120px;
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 @media all and (max-width: 600px){
@@ -123,5 +176,17 @@
   }
   .contacts {
     grid-template-rows: 100px 1fr 0.5fr 120px;
+  }
+  .about {
+    grid-template-rows: 100px 0.5fr 1fr 120px;
+  }
+  .portfolio {
+    grid-template-rows: 100px 0.5fr 1fr 0.5fr 120px;
+  }
+}
+
+@media all and (max-width: 470px){
+  .about {
+    grid-template-rows: 100px 0.3fr 1fr 120px;
   }
 }
